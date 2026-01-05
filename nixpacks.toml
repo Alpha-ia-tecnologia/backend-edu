@@ -5,7 +5,7 @@ nixPkgs = ["nodejs_20"]
 cmds = ["npm ci --include=dev"]
 
 [phases.build]
-cmds = ["npx tsc"]
+cmds = ["chmod +x node_modules/.bin/* && ./node_modules/.bin/tsc"]
 
 [start]
 cmd = "node dist/index.js"
